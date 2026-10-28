@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "qamart-playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest", "--headless"],
+      "tools": ["*"]
+    },
+    "qamart-filesystem": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "."],
+      "tools": ["read_text_file", "list_directory", "search_files"]
+    }
+  }
+}

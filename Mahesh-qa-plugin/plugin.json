@@ -1,0 +1,22 @@
+{
+  "name": "Mahesh-qa-plugin",
+  "version": "1.0.0",
+  "description": "QA Mart testing plugin: custom instructions, prompt files, skills, agents, an MCP server and guardrail hooks for protecting the Login, Coupon and Checkout/Order flows with Playwright + TypeScript.",
+  "author": { "name": "Mahesh Kumar" },
+  "license": "MIT",
+  "keywords": ["playwright", "typescript", "qa", "qamart", "copilot", "testing"],
+  "readme": "./README.md",
+  "instructions": [
+    "./instructions/copilot-instructions.md",
+    "./instructions/specs.instructions.md"
+  ],
+  "prompts": [
+    "./prompts/coupon-tests.prompt.md",
+    "./prompts/login-tests.prompt.md",
+    "./prompts/order-tests.prompt.md"
+  ],
+  "skills": "skills/",
+  "agents": "agents/",
+  "mcpServers": ".mcp.json",
+  "hooks": "hooks.json"
+}

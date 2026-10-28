@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "hooks": {
+    "preToolUse": [
+      {
+        "type": "command",
+        "comment": "Guardrail: deny edits to app/ and anything outside tests/, pages/ and Mahesh-qa-plugin/.",
+        "matcher": "edit|create|patch",
+        "command": "node \"${PLUGIN_ROOT}/hooks/guard-app.cjs\"",
+        "timeoutSec": 10
+      }
+    ],
+    "postToolUse": [
+      {
+        "type": "command",
+        "comment": "Warns (never blocks) about waitForTimeout, XPath and missing assertions in edited specs.",
+        "matcher": "edit|create|patch",
+        "command": "node \"${PLUGIN_ROOT}/hooks/post-edit-checks.cjs\"",
+        "timeoutSec": 15
+      }
+    ]
+  }
+}
